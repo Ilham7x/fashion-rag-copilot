@@ -84,5 +84,5 @@ The system retrieves relevant chunks and returns an answer based on them.
 - Integrate OpenAI / Llama-2 / other LLMs for more fluent generation.
 - Build a frontend dashboard for interactive querying.
 
-  ## 📜 License
-  MIT License
+## 📜 License
+MIT License
