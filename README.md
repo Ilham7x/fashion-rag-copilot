@@ -50,3 +50,39 @@ source .venv/bin/activate     # Linux/Mac
 ```bash
 pip install -r requirements.txt
 ```
+
+## 📥 Build the Index
+
+Place your PDFs into `data/` and run:
+
+```bash
+python src/build_index.py
+```
+
+This will:
+- Load all PDFs from data/
+- Split them into chunks (500 tokens with overlap)
+- Clean text and validate encodings
+- Embed chunks with all-mpnet-base-v2
+- Save them into a persistent Chroma index
+
+## 🔎 Query the Index
+Once the index is built, run the RAG pipeline:
+```bash
+python src/rag.py "What does the FashionSD-X paper propose?"
+```
+The system retrieves relevant chunks and returns an answer based on them.
+
+## 📊 Example Workflow
+1. Add fashion-related papers (e.g., FashionSD-X, SGDiff, StyleGAN).
+2. Build the index with build_index.py.
+3. Ask domain-specific questions with rag.py.
+4. (Optional) Run app.py to expose a simple API / UI for querying.
+
+## 🚀 Future Improvements
+- Add re-ranking for better retrieval quality.
+- Integrate OpenAI / Llama-2 / other LLMs for more fluent generation.
+- Build a frontend dashboard for interactive querying.
+
+  ## 📜 License
+  MIT License
