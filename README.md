@@ -18,7 +18,7 @@ The long-term aim is to serve as a **research copilot** for fashion AI, with a f
 ```
 fashion-rag-copilot/
 │
-├── data/ # Raw PDF files (not committed to GitHub)
+├── data/ # Raw PDF files
 ├── chroma_index/ # Persisted ChromaDB index
 │
 ├── src/
